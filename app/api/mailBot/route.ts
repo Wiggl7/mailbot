@@ -53,7 +53,7 @@ async function sendMail(receiver: string, subject: string, body: string, html: s
         secure: false,
         auth: {
           user: "info@portomario.com", 
-          pass: "Mario_porto198" 
+          pass: "" 
         },
       }); 
       await transporter.sendMail({
