@@ -52,12 +52,12 @@ async function sendMail(receiver: string, subject: string, body: string, html: s
         port: 587,
         secure: false,
         auth: {
-          user: "info@portomario.com", 
-          pass: "" 
+          user: process.env.EMAIL as string, 
+          pass: process.env.PASS as string 
         },
       }); 
       await transporter.sendMail({
-        from: "info@portomario.com",
+        from: process.env.EMAIL as string, 
         to: receiver,
         subject: subject,
         text: body,
